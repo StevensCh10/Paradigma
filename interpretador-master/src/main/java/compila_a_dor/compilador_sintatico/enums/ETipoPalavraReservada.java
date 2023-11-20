@@ -1,4 +1,4 @@
-package compila_a_dor.compilador_semantico.enums;
+package compila_a_dor.compilador_sintatico.enums;
 
 public enum ETipoPalavraReservada {
     IDENTIFICADOR,

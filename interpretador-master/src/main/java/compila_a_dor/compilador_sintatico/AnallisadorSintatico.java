@@ -1,4 +1,4 @@
-package compila_a_dor.compilador_semantico;
+package compila_a_dor.compilador_sintatico;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,7 +8,7 @@ import java.util.Stack;
 
 import compila_a_dor.compilador_lexico.Token;
 
-public class AnallisadorSemantico {
+public class AnallisadorSintatico {
 
     public static String analisarSemanticaPrimeiroToken(Token token){
         return "";  
@@ -37,7 +37,7 @@ public class AnallisadorSemantico {
     }
 
     private static String lerArquivo() throws IOException {
-        Path caminho = Paths.get("compilador-lexico-master\\src\\main\\resources\\prog.in");
+        Path caminho = Paths.get("interpretador-master\\src\\main\\resources\\prog.in");
         byte[] bytes = Files.readAllBytes(caminho);
         return new String(bytes);
     }

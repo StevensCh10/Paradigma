@@ -3,6 +3,8 @@ package compila_a_dor.compilador_lexico;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -36,12 +38,11 @@ public class AnalisadorLexico {
     private char[] conteudo;
     private int posicao;
 
-    public AnalisadorLexico(String nomeArquivo) {
+    public AnalisadorLexico() {
         try {
-            byte[] bConteudo = Files.readAllBytes(new File(
-                    getClass().getClassLoader().getResource(nomeArquivo).getFile()
-            ).toPath());
-            this.conteudo = new String(bConteudo).toCharArray();
+            Path caminho = Paths.get("interpretador-master\\src\\main\\resources\\prog.in");
+            byte[] bytes = Files.readAllBytes(caminho);
+            this.conteudo = new String(bytes).toCharArray();
             this.posicao = 0;
         } catch (IOException ex) {
             System.err.println("Erro ao ler arquivo");

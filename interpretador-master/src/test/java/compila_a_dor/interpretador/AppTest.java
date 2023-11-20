@@ -1,4 +1,4 @@
-package compila_a_dor.compilador_lexico;
+package compila_a_dor.interpretador;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

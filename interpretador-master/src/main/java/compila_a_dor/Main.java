@@ -4,13 +4,13 @@ import java.io.IOException;
 
 import compila_a_dor.compilador_lexico.AnalisadorLexico;
 import compila_a_dor.compilador_lexico.Token;
-import compila_a_dor.compilador_semantico.AnallisadorSemantico;
+import compila_a_dor.compilador_sintatico.AnallisadorSintatico;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        AnalisadorLexico analisadorLexico = new AnalisadorLexico("prog.in");
+        AnalisadorLexico analisadorLexico = new AnalisadorLexico();
 
-        if(!AnallisadorSemantico.verificarBalanceamentoDelimitadores()){
+        if(!AnallisadorSintatico.verificarBalanceamentoDelimitadores()){
             System.err.println("\nErro na sintaxe de parenteses/chaves\n");
             return;
         }
